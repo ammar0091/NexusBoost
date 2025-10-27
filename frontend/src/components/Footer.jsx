@@ -11,6 +11,10 @@ import {
 import { Facebook, Twitter, LinkedIn } from "@mui/icons-material";
 import { Link as RouterLink } from "react-router-dom";
 
+// --------------------
+// Data
+// --------------------
+
 const quickLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
@@ -36,9 +40,14 @@ const legalLinks = [
 
 const socialIcons = [Facebook, Twitter, LinkedIn];
 
+
+
 function Footer() {
   const currentYear = new Date().getFullYear();
 
+  // --------------------
+  // Styles
+  // --------------------
   const linkStyle = {
     display: "block",
     color: "#aaa",
@@ -63,13 +72,19 @@ function Footer() {
     },
   };
 
+  // --------------------
+  // Footer Component
+  // --------------------
+
   return (
     <Box sx={{ width: "100%" }}>
-      {/* Top Section */}
+
+        {/* ---------- Top Section ---------- */}
+
       <Box sx={{ bgcolor: "#1e1e1e", color: "#ccc", pt: 12, pb: 6, position: "relative" }}>
         <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
           <Grid container spacing={8}>
-            {/* Logo + Description */}
+             {/* ---- Logo & Description ---- */}
             <Grid item xs={12} md={4} maxWidth={450}>
               <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2, color: "#fff" }}>
                 <span style={{ color: "#771a1a" }}>Nexus</span>Boost
@@ -79,7 +94,7 @@ function Footer() {
               </Typography>
             </Grid>
 
-            {/* Links Sections */}
+            {/* -----Links Sections------- */}
             <Grid item xs={12} md={8}>
               <Grid container spacing={4} justifyContent={{ xs: "flex-start", md: "flex-end" }}>
                 {[{ title: "Quick Links", links: quickLinks }, { title: "Services", links: servicesLinks }].map((section, idx) => (
@@ -97,7 +112,7 @@ function Footer() {
                   </Grid>
                 ))}
 
-                {/* Connect */}
+                {/* -------Connect--------- */}
                 <Grid item xs={12} sm={4} sx={{ px: 3, py: { xs: 4, sm: 0 }, borderTop: { xs: "1px solid #414040", sm: "none" }, mb: { xs: 2, sm: 0 } }}>
                   <Typography variant="subtitle1" sx={{ mb: 1, color: "#fff" }}>Connect</Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
@@ -118,10 +133,10 @@ function Footer() {
         </Container>
       </Box>
 
-      {/* Divider */}
+      {/* ------Divider-------- */}
       <Divider sx={{ borderColor: "#111" }} />
 
-      {/* Bottom Bar */}
+      {/* ---------Bottom Bar--------- */}
       <Box sx={{ bgcolor: "#0e0e0e", py: 4 }}>
         <Container maxWidth="lg">
           <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, justifyContent: "space-between", alignItems: "center", gap: 2 }}>

@@ -5,8 +5,7 @@ const StatCard = ({ icon, number, label }) => {
   return (
     <Box
       sx={{
-        border: '2px solid white', // Outer white border
-        borderRadius: '8px',
+        // border: '2px solid white', // Outer white border/
         display: 'inline-block', 
       }}
     >
@@ -18,7 +17,7 @@ const StatCard = ({ icon, number, label }) => {
           boxShadow: 3,
           border: '4px solid black', // Inner black border
           transition: 'all 0.3s ease',
-          backgroundColor: '#fff',
+          // backgroundColor: '#fff',
           '&:hover': {
             border: '4px solid #771a1a',
             color: '#771a1a',
